@@ -19,7 +19,13 @@
   "bugs": {
     "url": "https://github.com/hifivejs/hifive-bdd/issues"
   },
-  "dependencies": {},
+  "dependencies": {
+    "boo": "^2.0.0",
+    "control.async": "^0.3.1",
+    "core.lambda": "^1.0.0",
+    "data.future": "^2.1.1",
+    "data.maybe": "^1.0.3"
+  },
   "devDependencies": {
     "browserify": "^3.33.0",
     "ink-docstrap": "git://github.com/robotlolita/docstrap",
