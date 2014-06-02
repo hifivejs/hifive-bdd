@@ -1,6 +1,6 @@
 {
   "name": "hifive-bdd",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "BDD interface in plain JavaScript for Hi-Five.",
   "main": "lib/index.js",
   "scripts": {
