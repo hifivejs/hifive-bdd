@@ -11,7 +11,7 @@
 		"template": "./node_modules/ink-docstrap/template"
 	},
 	"templates": {
-		"systemName": "hifive-bdd",
+		"systemName": "Specify (BDD EDSL)",
 		"theme": "cerulean",
 		"linenums": true,
 		"navType": "vertical",

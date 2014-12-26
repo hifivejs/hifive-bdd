@@ -1,40 +1,39 @@
 {
-  "name": "hifive-bdd",
-  "version": "0.1.0",
-  "description": "BDD interface in plain JavaScript for Hi-Five.",
+  "name": "specify-dsl-bdd",
+  "version": "0.2.0",
+  "description": "BDD EDSL for the Specify framework.",
   "main": "lib/index.js",
-  "scripts": {
-    "test": "make test"
-  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/hifivejs/hifive-bdd"
+    "url": "https://github.com/origamitower/specify-dsl-bdd.git"
   },
   "keywords": [
-    "fantasy-land",
-    "folktale"
+    "testing",
+    "edsl",
+    "bdd",
+    "specify",
+    "specify-dsl"
   ],
   "author": "Quildreen Motta",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hifivejs/hifive-bdd/issues"
+    "url": "https://github.com/origamitower/specify-dsl-bdd/issues"
   },
   "dependencies": {
     "boo": "^2.0.0",
-    "control.async": "^0.3.1",
-    "core.lambda": "^1.0.0",
-    "data.future": "^2.1.1",
-    "data.maybe": "^1.0.3"
+    "control.async": "~0.5.1",
+    "core.lambda": "~1.0.0",
+    "data.future": "~2.3.0",
+    "data.maybe": "~1.2.0"
   },
   "devDependencies": {
     "browserify": "^3.33.0",
     "ink-docstrap": "git://github.com/robotlolita/docstrap",
     "jsdoc": "^3.3.0-alpha5",
-    "hifive-tap": "^0.1.0",
-    "hifive": "^0.1.0",
     "uglify-js": "^2.4.3",
-    "laws": "^0.2.1",
-    "alright": "^1.0.0",
-    "sweet.js": "^0.5.0"
+    "sweet.js": "~0.7.2",
+    "lambda-chop": "~0.1.5",
+    "adt-simple": "~0.1.3",
+    "sparkler": "~0.3.5"
   }
 }

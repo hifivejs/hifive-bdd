@@ -6,8 +6,8 @@ uglify     = $(bin)/uglifyjs
 VERSION    = $(shell node -e 'console.log(require("./package.json").version)')
 
 # -- Configuration -----------------------------------------------------
-PACKGE   = NAME
-EXPORTS  = EXPORTS
+PACKAGE  = specify-dsl-bdd
+EXPORTS  = Specify.DSL.BDD
 
 LIB_DIR  = lib
 SRC_DIR  = src
@@ -33,8 +33,11 @@ dist/$(PACKAGE).umd.min.js: dist/$(PACKAGE).umd.js
 $(LIB_DIR)/%.js: $(SRC_DIR)/%.sjs
 	mkdir -p $(dir $@)
 	$(sjs) --readable-names \
-	       --sourcemap      \
-	       --output $@      \
+	       --module lambda-chop/macros \
+	       --module sparkler/macros \
+	       --module adt-simple/macros \
+	       --sourcemap \
+	       --output $@ \
 	       $<
 
 $(TEST_BLD)/%.js: %(TEST_DIR)/%.sjs
@@ -52,7 +55,7 @@ bundle: dist/$(PACKAGE).umd.js
 
 minify: dist/$(PACKAGE).umd.min.js
 
-documentation:
+documentation: all
 	$(jsdoc) --configure jsdoc.conf.json
 	ABSPATH=$(shell cd "$(dirname "$0")"; pwd) $(MAKE) clean-docs
 
@@ -61,9 +64,6 @@ clean-docs:
 
 clean:
 	rm -rf dist build
-
-test: $(TEST_TGT)
-	node test/tap
 
 package: documentation bundle minify
 	mkdir -p dist/$(PACKAGE)-$(VERSION)
